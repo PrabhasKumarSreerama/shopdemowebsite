@@ -1,6 +1,7 @@
 .product-card {
     display: inline-flex;
     flex-direction: column;
+    justify-content: space-between;
     width: 300px;
     border: 1px solid #e0e0e0;
     border-radius: 8px;
@@ -64,9 +65,25 @@
 }
 
 .product-rate {
-    color: #ffc107; 
+    color: #ffc107;
 }
 
 .product-count {
     color: #666666;
+}
+
+.add-btn {
+    border: none;
+    outline: 0;
+    padding: 12px;
+    color: white;
+    background-color: #000;
+    text-align: center;
+    cursor: pointer;
+    width: 100%;
+    font-size: 18px;
+}
+
+.add-btn:hover {
+    opacity: 0.5;
 }

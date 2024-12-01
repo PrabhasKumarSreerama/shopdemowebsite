@@ -1,70 +1,137 @@
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Add to Cart Task Using Modal
 
-## Available Scripts
+A ReactJS application that fetches product data from the Fake Store API and allows users to manage a shopping cart through a custom modal interface.
 
-In the project directory, you can run:
+## Features
 
-### `npm start`
+- Fetches product data from the **Fake Store API**.
+- Displays a list of products with essential details (image, title, price).
+- Allows users to add products to the cart via an **Add to Cart** button.
+- Displays an **alert** if a product is already in the cart.
+- Shows the cart item count in a **responsive Navbar**.
+- Opens a **custom modal** displaying cart contents when the "Cart" button is clicked.
+- Includes a **Remove from Cart** button for each item in the modal.
+- Updates the cart dynamically based on user actions.
+- Fully responsive design for desktop and mobile devices.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+---
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Technologies Used
 
-### `npm test`
+- **ReactJS**: For building the user interface.
+- **CSS**: For custom modal styling and responsive design.
+- **Fetch API**: For making HTTP requests to the Fake Store API.
+- **HTML**: Basic structure and layout.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+---
 
-### `npm run build`
+## Prerequisites
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Before you begin, ensure you have the following installed:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- [Node.js](https://nodejs.org/) (v14 or later)
+- [npm](https://www.npmjs.com/) (comes with Node.js)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+---
 
-### `npm run eject`
+## Installation
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+1. **Clone the repository:**
+   ```bash
+   git clone https://github.com/your-username/react-cart-task.git
+   cd react-cart-task
+   ```
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+2. **Install dependencies:**
+   ```bash
+   npm install
+   ```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+3. **Start the development server:**
+   ```bash
+   npm start
+   ```
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+4. Open the application in your browser at `http://localhost:3000`.
 
-## Learn More
+---
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Project Structure
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+```
+react-cart-task/
+├── src/
+│   ├── components/
+│   │   ├── Navbar.js        # Navbar component displaying cart count
+│   │   ├── ProductList.js   # Component rendering list of products
+│   │   ├── ProductCard.js   # Individual product card
+│   │   ├── CartModal.js     # Custom modal to display cart items
+│   ├── App.js               # Main app component
+│   ├── App.css              # Global styling
+│   └── index.js             # Entry point
+├── public/
+│   ├── index.html           # Root HTML file
+│   └── favicon.ico          # Favicon
+├── package.json             # Project configuration and dependencies
+├── README.md                # Project documentation
+```
 
-### Code Splitting
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## Usage
 
-### Analyzing the Bundle Size
+### 1. Main Features:
+- **View Products**: Browse the list of products fetched from the Fake Store API.
+- **Add to Cart**: Click the "Add to Cart" button on any product to add it to your cart.
+- **Cart Overview**: Click on the "Cart" button in the Navbar to view the items in the cart via a modal.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+### 2. Custom Modal:
+- The modal shows a list of products in the cart.
+- Each item has a "Remove" button to delete it from the cart.
+- If the cart is empty, the modal displays a message indicating that.
 
-### Making a Progressive Web App
+### 3. Alerts:
+- If you try to add a product already in the cart, you'll see an alert message: **"Item already added to the cart"**.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+---
 
-### Advanced Configuration
+## API Used
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+**Fake Store API**:  
+Base URL: `https://fakestoreapi.com/products`  
+This API provides a list of fake e-commerce products for testing purposes.
 
-### Deployment
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+## Screenshots
 
-### `npm run build` fails to minify
+### Product List:
+![Product List](https://via.placeholder.com/600x300?text=Product+List)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+### Cart Modal:
+![Cart Modal](https://via.placeholder.com/600x300?text=Cart+Modal)
+
+---
+
+## Responsive Design
+
+- The application is designed to work seamlessly on both **desktop** and **mobile** devices.
+- The layout adapts to different screen sizes for an optimal user experience.
+
+---
+
+## Future Enhancements
+
+- Add product quantity support in the cart.
+- Add a checkout functionality with a total price calculation.
+- Improve the alert system by using a notification component.
+
+---
+
+## Acknowledgments
+
+- [Fake Store API](https://fakestoreapi.com/) for providing the product data.
+- ReactJS documentation for guidance on building reusable components.
+
+---
